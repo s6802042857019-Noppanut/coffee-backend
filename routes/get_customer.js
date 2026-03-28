@@ -16,8 +16,7 @@ router.get("/api/customers/:phone", (req, res) => {
         if (results.length > 0) {
             res.json({
                 message: "success",
-                count: results.length,
-                data: results,
+                data: results[0],
             });
         }
         else {
