@@ -6,7 +6,9 @@ import put_menu from "./routes/put_menu.js";
 import patch_menu from "./routes/patch_menu.js";
 import delete_menu from "./routes/delete_menu.js";
 import get_customer from "./routes/get_customer.js"
-import get_topping from './routes/get_topping.js'
+import get_topping from "./routes/get_topping.js"
+import post_customer from "./routes/post_customer.js"
+import post_order from "./routes/post_order.js"
 
 
 const app = express();
@@ -20,6 +22,8 @@ app.use(patch_menu);
 app.use(delete_menu);
 app.use(get_customer);
 app.use(get_topping);
+app.use(post_customer);
+app.use(post_order);
 
 app.listen(3000, () => {
     console.log("Server starts on: http://localhost:3000");
