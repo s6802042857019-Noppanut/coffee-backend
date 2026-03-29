@@ -5,10 +5,13 @@ import post_menu from "./routes/post_menu.js";
 import put_menu from "./routes/put_menu.js";
 import patch_menu from "./routes/patch_menu.js";
 import delete_menu from "./routes/delete_menu.js";
-import get_customer from "./routes/get_customer.js"
-import get_topping from "./routes/get_topping.js"
-import post_customer from "./routes/post_customer.js"
-import post_order from "./routes/post_order.js"
+import get_customer from "./routes/get_customer.js";
+import get_topping from "./routes/get_topping.js";
+import post_customer from "./routes/post_customer.js";
+import post_order from "./routes/post_order.js";
+import crud_menu_nosql from "./routes/crud_menu_nosql.js";
+import post_order_nosql from "./routes/post_order_nosql.js";
+import get_report_nosql from "./routes/get_report_nosql.js";
 
 
 const app = express();
@@ -24,6 +27,9 @@ app.use(get_customer);
 app.use(get_topping);
 app.use(post_customer);
 app.use(post_order);
+app.use(crud_menu_nosql);
+app.use(post_order_nosql);
+app.use(get_report_nosql);
 
 app.listen(3000, () => {
     console.log("Server starts on: http://localhost:3000");
